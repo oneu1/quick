@@ -1,0 +1,15 @@
+function sortedArray = quickSort(arr)
+    if length(arr) <= 1 then
+        sortedArray = arr;
+    else
+        pivot = arr(1);
+        left = arr(arr < pivot);
+        right = arr(arr > pivot);
+        sortedArray = [quickSort(left), pivot, quickSort(right)];
+    end
+endfunction
+
+arr = [64, 25, 12, 22, 11];
+sortedArr = quickSort(arr);
+disp("Sorted Array: ");
+disp(sortedArr);
